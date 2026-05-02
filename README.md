@@ -1,4 +1,8 @@
-# express-auth-kit
+# Auth Kit
+
+[![npm version](https://img.shields.io/npm/v/@goelharshit006/auth-kit.svg)](https://www.npmjs.com/package/@goelharshit006/auth-kit)
+[![npm downloads](https://img.shields.io/npm/dm/@goelharshit006/auth-kit.svg)](https://www.npmjs.com/package/@goelharshit006/auth-kit)
+[![license](https://img.shields.io/npm/l/@goelharshit006/auth-kit.svg)](LICENSE)
 
 > Production-ready authentication and authorization middleware for Express.js
 
