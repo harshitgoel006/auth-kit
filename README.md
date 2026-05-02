@@ -204,7 +204,7 @@ Unlike traditional auth solutions, this package:
 
 ## Author
 
-**Harshit**
+**Harshit Goel**
 
 ---
 
