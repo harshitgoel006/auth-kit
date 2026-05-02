@@ -1,0 +1,30 @@
+{
+  "name": "express-auth-kit",
+  "version": "1.0.0",
+  "description": "Production-ready authentication and authorization middleware for Express.js",
+  "main": "src/index.js",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "files": [
+    "src"
+  ],
+  "keywords": [
+    "auth",
+    "authentication",
+    "authorization",
+    "middleware",
+    "express",
+    "jwt",
+    "rbac"
+  ],
+  "author": "Harshit",
+  "license": "ISC",
+  "dependencies": {
+    "jsonwebtoken": "^9.0.3"
+  },
+  "engines": {
+    "node": ">=16"
+  }
+}
