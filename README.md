@@ -217,6 +217,3 @@ ISC
 ````
 
 ---
-
-👉 “v2 me kya killer feature add kare”
-👉 main tujhe aisa idea dunga jo tera package standout kar de 🚀
