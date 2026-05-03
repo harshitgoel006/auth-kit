@@ -3,29 +3,30 @@
 [![npm version](https://img.shields.io/npm/v/@goelharshit006/auth-kit)](https://www.npmjs.com/package/@goelharshit006/auth-kit)
 [![npm downloads](https://img.shields.io/npm/dm/@goelharshit006/auth-kit)](https://www.npmjs.com/package/@goelharshit006/auth-kit)
 [![license](https://img.shields.io/npm/l/@goelharshit006/auth-kit)](LICENSE)
+
 > Production-ready authentication and authorization middleware for Express.js
 
 ---
 
 ## Features
 
-- JWT-based authentication
-- Plug-and-play middleware (`authenticate`)
-- Role-based access control (`authorize`)
-- Fully configurable (no DB coupling)
-- Flexible token sources (header, cookie, query)
-- Custom validation hooks
-- Debug mode support
-- Custom error handling support
-- Lightweight & reusable
+- JWT-based authentication  
+- Plug-and-play middleware (`authenticate`)  
+- Role-based access control (`authorize`)  
+- Fully configurable (no DB coupling)  
+- Flexible token sources (header, cookie, query)  
+- Custom validation hooks  
+- Debug mode support  
+- Custom error handling support  
+- Lightweight & reusable  
 
 ---
 
 ## Installation
 
 ```bash
-npm install express-auth-kit
-```
+npm install @goelharshit006/auth-kit
+````
 
 ---
 
@@ -33,11 +34,11 @@ npm install express-auth-kit
 
 ```js
 import express from "express";
-import { createAuth, authorize } from "express-auth-kit";
+import { createAuth, authorize } from "@goelharshit006/auth-kit";
 
 const app = express();
 
-//  Example user fetch function (replace with DB call)
+// Example user fetch function (replace with DB call)
 const getUser = async (id) => {
   return {
     _id: id,
@@ -46,23 +47,23 @@ const getUser = async (id) => {
   };
 };
 
-//  Initialize auth system
+// Initialize auth system
 const { authenticate } = createAuth({
   jwtSecret: "your_secret_key",
   getUser,
 });
 
-//  Public route
+// Public route
 app.get("/", (req, res) => {
   res.send("Public route");
 });
 
-//  Protected route
+// Protected route
 app.get("/profile", authenticate, (req, res) => {
   res.json(req.user);
 });
 
-//  Admin route
+// Admin route
 app.get("/admin", authenticate, authorize("admin"), (req, res) => {
   res.send("Welcome Admin 🚀");
 });
@@ -113,13 +114,13 @@ createAuth({
 authorize("admin");
 ```
 
-### With multiple roles:
+### Multiple roles
 
 ```js
 authorize(["admin", "moderator"]);
 ```
 
-### With hierarchy:
+### Role hierarchy
 
 ```js
 authorize({
@@ -155,7 +156,7 @@ createAuth({
 ### Default handler
 
 ```js
-import { defaultErrorHandler } from "express-auth-kit";
+import { defaultErrorHandler } from "@goelharshit006/auth-kit";
 
 app.use(defaultErrorHandler);
 ```
@@ -185,23 +186,21 @@ express-auth-kit/
 
 ---
 
-## Why express-auth-kit?
+## Why Auth Kit?
 
-Unlike traditional auth solutions, this package:
-
-- Does NOT force any database or ORM
-- Does NOT assume user schema
-- Fully customizable
-- Easily reusable across projects
+* No forced database or ORM
+* No assumptions about user schema
+* Fully customizable
+* Easily reusable across projects
 
 ---
 
 ## Future Improvements
 
-- Refresh token support
-- Rate limiting integration
-- OAuth strategies
-- Logging hooks
+* Refresh token support
+* Rate limiting integration
+* OAuth strategies
+* Logging hooks
 
 ---
 
@@ -214,3 +213,10 @@ Unlike traditional auth solutions, this package:
 ## License
 
 ISC
+
+````
+
+---
+
+👉 “v2 me kya killer feature add kare”
+👉 main tujhe aisa idea dunga jo tera package standout kar de 🚀
